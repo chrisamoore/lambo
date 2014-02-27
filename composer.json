@@ -1,0 +1,41 @@
+{
+	"name": "chrisamoore/jagged-ui",
+    "description": "Jagged UI an AngularJS module for UI Awesomeness for Laravel",
+    "license": "Apache-2.0",
+    "tags": ["laravel"],
+    "authors": [
+        {
+            "name": "Christopher A. Moore",
+            "email": "chris@camdesigns.net"
+        },{
+            "name": "Justin Woodcock",
+            "email": "justin@digitaluprisingdesign.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "illuminate/view": "4.1.*",
+        "justinwoodcock/jagged-ui": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jaggedui\\JaggedUi": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "justinwoodcock/jagged-ui",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/justinwoodcock/Jagged-UI",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        }
+    ],
+    "minimum-stability": "stable"
+}
