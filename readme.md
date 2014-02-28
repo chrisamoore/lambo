@@ -1,4 +1,5 @@
 ##ReadMe
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/chrisamoore/jagged-ui/badges/quality-score.png?s=301bb7b55a6c8f9174847299540aa594ea0dc2fd)](https://scrutinizer-ci.com/g/chrisamoore/jagged-ui/)
 #TODO:
     - lock down dependencies ie. get @justinwoodcock to tag a release
     - remove from bench
