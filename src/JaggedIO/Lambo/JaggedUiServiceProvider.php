@@ -1,7 +1,7 @@
-<?php namespace Jaggedui\JaggedUi;
+<?php namespace JaggedIO\Lambo;
 
 use Illuminate\Support\ServiceProvider;
-use Jaggedui\JaggedUi\Helper\UIHelper;
+use JaggedIO\Lambo\Helper\UIHelper;
 
 class JaggedUiServiceProvider extends ServiceProvider
 {
@@ -26,10 +26,6 @@ class JaggedUiServiceProvider extends ServiceProvider
         // Bring the application container instance into the local scope so we can
         // import it into the filters scope.
         $app = $this->app;
-
-//        $this->app->before(function() use ($app){
-//            $app['jaggedui']->moveFiles();
-//        });
 
     }
 

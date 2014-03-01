@@ -19,7 +19,7 @@
      * @copyright   CAMDesigns 2014
      * @license     Apache License, Version 2.0
      */
-    namespace Jaggedui\JaggedUi\Helper;
+    namespace JaggedIO\Lambo\Helper;
 
     use Illuminate\View\Environment;
     use RecursiveDirectoryIterator;
@@ -38,7 +38,7 @@
          *
          * @param \Illuminate\View\Environment $view
          *
-         * @return \Jaggedui\JaggedUi\Helper\UIHelper
+         * @return \Jaggedui\Lambo\Helper\UIHelper
          */
         public function __construct(Environment $view)
         {
@@ -66,4 +66,4 @@
             return $dir;
         }
     }
- 
+
