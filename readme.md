@@ -1,69 +1,70 @@
 ##ReadMe
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/chrisamoore/jagged-ui/badges/quality-score.png?s=301bb7b55a6c8f9174847299540aa594ea0dc2fd)](https://scrutinizer-ci.com/g/chrisamoore/jagged-ui/)
+
 #TODO:
     - lock down dependencies ie. get @justinwoodcock to tag a release
-    - remove from bench
     - post to packagist
     - travis
-    - clean up publish url 
+    - clean up publish url
     - setup scaffolding
-    
-###Install Via Composer 
-`composer.json`
 
-    {
-        "require": {
-            "php": ">=5.4.0",
-            "illuminate/support": "4.1.*",
-            "illuminate/view": "4.1.*",
-            "justinwoodcock/jagged-ui": "dev-master"
+###Install Via Composer
+`composer.json` __Not on packagist yet.__
+
+
+    "require": {
+        "laravel/framework": "4.1.*",
+        ...
+        "way/generators": "dev-master",
+        "jagged/lambo" : "dev-master",
+        "jagged/jagged-ui" : "dev-master"
+    },
+
+    ...
+    "repositories": [
+        {
+           "type": "vcs",
+           "url": "https://github.com/jagged-io/lambo"
         },
-        "autoload": {
-            "psr-0": {
-                "Jaggedui\\JaggedUi": "src/"
-            }
-        },
-        "repositories": [
-            {
-                "type": "package",
-                "package": {
-                    "name": "justinwoodcock/jagged-ui",
-                    "version": "dev-master",
-                    "source": {
-                        "url": "https://github.com/justinwoodcock/Jagged-UI",
-                        "type": "git",
-                        "reference": "origin/master"
-                    }
+        {
+            "type": "package",
+            "package": {
+                "name": "jagged/jagged-ui",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/jagged-io/Jagged-UI",
+                    "type": "git",
+                    "reference": "origin/master"
                 }
             }
-        ],
-        "minimum-stability": "stable"
-    }
+        }
+    ],
+    ...
 
-###Setup Service Provider: 
+
+###Setup Service Provider:
 `app/config/app.php`
-        
+
         'providers' => [
             ...
-            'Jaggedui\JaggedUi\JaggedUiServiceProvider',
+            'Jagged\Lambo\JaggedUiServiceProvider',
             ...
         ],
 
-###Publish your assets 
-`php artisan asset:publish --bench jaggedui/jagged-ui`
+###Publish your assets
+`php artisan asset:publish jagged/lambo`
 
-###Call Js and Inject it in your View        
+###Call Js and Inject it in your View
 `app/routes.php`
 
     Route::get('/jagged', function() use ($app){
         $js = $app['jaggedui']->Js(); // or $js = App::make('jaggedui')-Js();
-        
+
         return View::make('default.hello', compact('js'));
     });
-    
+
 `app/views/default/hello.blade.php`
 
-    <link href="{{ URL::to('packages/jaggedui/jagged-ui/css/thirdparty.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::to('packages/jagged/jagged-ui/css/thirdparty.min.css') }}" rel="stylesheet">
     <h1>Hi</h1>
     {{ $js }}
-    
+
