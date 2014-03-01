@@ -1,6 +1,6 @@
 {
-	"name": "chrisamoore/jagged-ui",
-    "description": "Jagged UI an AngularJS module for UI Awesomeness for Laravel",
+	"name": "jagged-io/lambo",
+    "description": "Jagged/Lambo ( CLI tool for badasses )",
     "license": "Apache-2.0",
     "tags": ["laravel"],
     "authors": [
