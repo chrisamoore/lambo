@@ -19,7 +19,7 @@
      * @copyright   CAMDesigns 2014
      * @license     Apache License, Version 2.0
      */
-    namespace JaggedIO\Lambo\Helper;
+    namespace Jagged\Lambo\Helper;
 
     use Illuminate\View\Environment;
     use RecursiveDirectoryIterator;

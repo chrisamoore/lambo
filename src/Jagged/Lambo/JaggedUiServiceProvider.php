@@ -1,7 +1,7 @@
 <?php namespace JaggedIO\Lambo;
 
 use Illuminate\Support\ServiceProvider;
-use JaggedIO\Lambo\Helper\UIHelper;
+use Jagged\Lambo\Helper\UIHelper;
 
 class JaggedUiServiceProvider extends ServiceProvider
 {
@@ -21,7 +21,7 @@ class JaggedUiServiceProvider extends ServiceProvider
     public function boot()
     {
         \View::addNamespace('jaggedui', __DIR__.'/views');
-        $this->package('jaggedui/uihelper');
+        $this->package('jagged/uihelper');
 
         // Bring the application container instance into the local scope so we can
         // import it into the filters scope.

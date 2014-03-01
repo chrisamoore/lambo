@@ -1,5 +1,5 @@
 {
-	"name": "jagged-io/lambo",
+	"name": "jagged/lambo",
     "description": "Jagged/Lambo ( CLI tool for badasses )",
     "license": "Apache-2.0",
     "tags": ["laravel"],
@@ -16,18 +16,18 @@
         "php": ">=5.3.0",
         "illuminate/support": "4.1.*",
         "illuminate/view": "4.1.*",
-        "jagged-io/jagged-ui": "dev-master"
+        "jagged/jagged-ui": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "JaggedIO\\Lambo": "src/"
+            "Jagged\\Lambo": "src/"
         }
     },
     "repositories": [
         {
             "type": "package",
             "package": {
-                "name": "jagged-io/jagged-ui",
+                "name": "jagged/jagged-ui",
                 "version": "dev-master",
                 "source": {
                     "url": "https://github.com/jagged-io/Jagged-UI",
