@@ -21,17 +21,13 @@
 
     ...
     "repositories": [
-        {
-           "type": "vcs",
-           "url": "https://github.com/jagged-io/lambo"
-        },
-        {
+		{
             "type": "package",
             "package": {
-                "name": "jagged/jagged-ui",
+                "name": "chrisamoore/lambo",
                 "version": "dev-master",
                 "source": {
-                    "url": "https://github.com/jagged-io/Jagged-UI",
+                    "url": "git@github.com:chrisamoore/lambo.git",
                     "type": "git",
                     "reference": "origin/master"
                 }
